@@ -28,10 +28,10 @@
 
 ## 工具介绍
 
-- Python 2.7
+- Python 2.7/3  都可以其实
 - Android 手机
-- Adb 驱动
-- Python Matplot绘图
+- Adb 驱动  sudo apt-get install adb
+- Python Matplot绘图  仅仅用到这个库
 
 如果你是`iOS`，请参考下面的配置：
 - 使用真机调试wda，参考iOS 真机如何安装 [WebDriverAgent · TesterHome](https://testerhome.com/topics/7220)
@@ -76,6 +76,13 @@ pip install -r requirements.txt
 - 电脑与手机USB线连接，确保执行`adb devices`可以找到设备id
 - 界面转至微信跳一跳游戏，点击开始游戏
 - 运行`python wechat_junp_auto.py`，如果手机界面显示USB授权，请点击确认
+
+## 建议在linux上运行
+- ubuntu中先apt-get install adb
+- 测试：
+	adb shell screencap -p /sdcard/1.png
+    	adb pull /sdcard/1.png .
+- 如果ok，则直接用安装好库的python环境运行`wechat_junp_auto.py`
 
 
 ## 实验结果
